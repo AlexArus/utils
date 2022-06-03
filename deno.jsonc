@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+      "allowJs": true,
+      "lib": ["dom", "dom.iterable", "esnext", "deno.ns"],
+      "strict": true
+    },
+    "lint": {
+      "files": {
+        "include": ["src/"],
+        "exclude": []
+      },
+      "rules": {
+        "tags": ["recommended"],
+        "include": ["ban-untagged-todo"],
+        "exclude": []
+      }
+    },
+    "fmt": {
+      "files": {
+        "include": ["src/"],
+        "exclude": []
+      },
+      "options": {
+        "useTabs": true,
+        "lineWidth": 120,
+        "indentWidth": 4,
+        "singleQuote": true,
+        "proseWrap": "preserve"
+      }
+    },
+    "tasks": {
+      "build": "deno task build-check-folder && deno task build-compile-js && deno task build-compile-sw && deno task build-copy-html",
+      "build-check-folder": "mkdir -p ./build",
+      "build-compile-js": "deno bundle ./src/app/index.ts ./build/app.js --config ./deno.jsonc",
+      "build-compile-sw": "deno bundle ./src/sw.ts ./build/sw.js --config ./deno.jsonc",
+      "build-copy-html": "cp ./src/index.html ./build/index.html"
+    }
+  }
