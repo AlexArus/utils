@@ -1,5 +1,3 @@
-
-  
 const appRootEl = document.getElementById('app')
 
 if(appRootEl){
