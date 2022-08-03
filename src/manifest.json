@@ -1,0 +1,20 @@
+{
+  "short_name": "Utils",
+  "name": "Utils",
+  "description": "Different utils&amp;tools",
+  "start_url": "/utils/",
+  "scope": "/utils/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "20x20"
+    },
+    {
+      "src": "favicon_144.svg",
+      "type": "image/svg+xml",
+      "sizes": "144x144"
+    }
+  ]
+}
